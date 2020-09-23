@@ -1,0 +1,5 @@
+FROM openjdk:latest
+EXPOSE 9004
+VOLUME /var/myData/details
+ADD target/details-1.0-SNAPSHOT.jar details.jar
+ENTRYPOINT ["java", "-jar", "/details.jar"]

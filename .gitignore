@@ -1,0 +1,13 @@
+# Project exclude paths
+/buyaction/target/
+/buyaction_mqconsumer/target/
+/comment/target/
+/commons/target/
+/details/target/
+/gateway/target/
+/login/target/
+/mongodbDao/target/
+/order/target/
+/pojo/target/
+/rabbit_publisher/target/
+/redis/target/

@@ -1,0 +1,7 @@
+spring:
+  rabbitmq:
+    host: 10.211.55.9
+    username: elton
+    password: elton
+  profiles:
+    active: commons

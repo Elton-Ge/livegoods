@@ -1,0 +1,5 @@
+FROM openjdk:latest
+EXPOSE 9004
+VOLUME /var/myData/comment
+ADD target/comment-1.0-SNAPSHOT.jar comment.jar
+ENTRYPOINT ["java", "-jar", "/comment.jar"]

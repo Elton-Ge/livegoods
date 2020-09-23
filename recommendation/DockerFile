@@ -1,0 +1,5 @@
+FROM openjdk:latest
+EXPOSE 9002
+VOLUME /var/myData/recommendation
+ADD target/recommendation-1.0-SNAPSHOT.jar recommendation.jar
+ENTRYPOINT ["java", "-jar", "/recommendation.jar"]

@@ -1,0 +1,5 @@
+FROM openjdk:latest
+EXPOSE 9003
+VOLUME /var/myData/search
+ADD target/search-1.0-SNAPSHOT.jar search.jar
+ENTRYPOINT ["java", "-jar", "/search.jar"]

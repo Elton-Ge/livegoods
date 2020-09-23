@@ -1,0 +1,5 @@
+FROM openjdk:latest
+EXPOSE 9001
+VOLUME /var/myData/hotProduct
+ADD target/hotproduct-1.0-SNAPSHOT.jar hotproduct.jar
+ENTRYPOINT ["java", "-jar", "/hotproduct.jar"]

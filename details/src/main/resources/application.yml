@@ -1,0 +1,14 @@
+server:
+  port: 9004
+
+spring:
+  application:
+    name: details
+  profiles:
+    active: mongodb,commons,redis
+eureka:
+  client:
+    service-url:
+      defaultZone: http://10.211.55.6:8761/eureka
+  instance:
+    prefer-ip-address: true # 优选IP作为服务的注册、发现、访问地址。

@@ -1,0 +1,14 @@
+fdfs:
+  nginx:
+    prefix: http://10.211.55.5:8888/
+item:
+  redis:
+    key:
+      prefix: 'com.livegoods.details:'
+      suffix: 'selectById:'
+buyaction:
+  rabbitmq:
+    exchange: buy-exchange
+    routekey: buy-routekey
+    queue: buy-queue
+    

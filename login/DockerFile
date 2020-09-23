@@ -1,0 +1,5 @@
+FROM openjdk:latest
+EXPOSE 9007
+VOLUME /var/myData/login
+ADD target/login-1.0-SNAPSHOT.jar login.jar
+ENTRYPOINT ["java", "-jar", "/login.jar"]

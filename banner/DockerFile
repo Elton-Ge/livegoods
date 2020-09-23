@@ -1,0 +1,5 @@
+FROM openjdk:latest
+EXPOSE 9000
+VOLUME /var/myData/banner
+ADD target/banner-1.0-SNAPSHOT.jar banner.jar
+ENTRYPOINT ["java", "-jar", "/banner.jar"]

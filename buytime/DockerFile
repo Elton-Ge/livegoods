@@ -1,0 +1,5 @@
+FROM openjdk:latest
+EXPOSE 9006
+VOLUME /var/myData/buytime
+ADD target/buytime-1.0-SNAPSHOT.jar buytime.jar
+ENTRYPOINT ["java", "-jar", "/buytime.jar"]

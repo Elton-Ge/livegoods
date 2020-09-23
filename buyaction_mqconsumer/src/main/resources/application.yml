@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: buyaction-consumer
+  profiles:
+    active: redis,commons,rabbitmq,mongodb

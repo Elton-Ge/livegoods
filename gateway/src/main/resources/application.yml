@@ -1,0 +1,76 @@
+# 前端工程启动的时候，是使用cnpm start | npm start
+# 前端工程启动命令start是一个批处理命令，启动了两个服务。 npm run serve 和 mock
+# 1、 Vue的前端应用，占用端口80。
+# 2、 Mock的静态测试服务，占用4006端口。
+server:
+  port: 4006
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: false
+          lower-case-service-id: true
+      routes:
+        - id: banner
+          uri: lb://banner
+          predicates:
+            - Path=/banner
+        - id: hotProduct
+          uri: lb://hotProduct
+          predicates:
+            - Path=/hotProduct
+            - Query=city
+        - id: recommendation
+          uri: lb://recommendation
+          predicates:
+            - Path=/recommendation
+            - Query=city
+        - id: search
+          uri: lb://search
+          predicates:
+            - Path=/search
+            - Query=city
+            - Query=content
+            - Query=page
+        - id: details
+          uri: lb://details
+          predicates:
+            - Path=/details
+            - Query=id
+        - id: comment
+          uri: lb://comment
+          predicates:
+            - Path=/comment
+            - Query=id
+            - Query=page
+        - id: comment
+          uri: lb://comment
+          predicates:
+            - Path=/feelback
+        - id: buytime
+          uri: lb://buytime
+          predicates:
+            - Path=/buytime
+            - Query=id
+        - id: login
+          uri: lb://login
+          predicates:
+            - Path=/sendyzm,/login
+            # - Query=phone # 配置后，无法实现路由转发。 此predicate谓词处理器，只检查请求头中的请求参数。
+        - id: buyaction
+          uri: lb://buyaction
+          predicates:
+            - Path=/buyaction
+        - id: order
+          uri: lb://order
+          predicates:
+            - Path=/order
+            - Query=user
+          
+eureka:
+  client:
+    service-url:
+      defaultZone: http://10.211.55.6:8761/eureka/

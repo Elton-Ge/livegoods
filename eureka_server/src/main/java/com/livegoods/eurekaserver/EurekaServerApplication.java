@@ -1,0 +1,19 @@
+package com.livegoods.eurekaserver;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+
+/**
+ * @Auther: Elton Ge
+ * @Date: 16/9/20
+ * @Description: com.livegoods.eurekaserver
+ * @version: 1.0
+ */
+@SpringBootApplication
+@EnableEurekaServer
+public class EurekaServerApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(EurekaServerApplication.class,args);
+    }
+}
