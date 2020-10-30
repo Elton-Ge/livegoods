@@ -4,7 +4,6 @@
 
 * Eureka
 * Gateway
-* AMQP-rabbitmq
 * Redis
 * MongoDb
 * FastDFS
